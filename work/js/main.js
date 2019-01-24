@@ -2,14 +2,7 @@
 
 // On this codelab, you will be streaming only video (video: true).
 const mediaStreamConstraints = {
-    video: {
-        width: {
-         min: 1280
-        },
-        height: {
-            height: 720
-        }
-    }
+    video: true
 };
 
 // Video element where stream will be placed.
@@ -30,5 +23,5 @@ function handleLocalMediaStreamError(error) {
 }
 
 // Initializes media stream.
-navigator.mediaDevices.getUserMedia(mediaStreamConstraints)
+navigator.mediaDevices.getUserMedia(hdConstraints)
 .then(gotLocalMediaStream).catch(handleLocalMediaStreamError);
